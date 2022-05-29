@@ -17,6 +17,7 @@ double calculate(char *expression) {
   char *end = beg + strlen(expression) - 1;
   node_t *tree = create_tree(beg, end);
   double result = calculate_node(tree);
+  delete_tree(tree);
   return result;
 }
 
